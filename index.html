@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API</title>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="node_modules/angular-animate/angular-animate.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body ng-app="myapp">
+    <div class="contain-fluid box">
+        <div class="row">
+            <div class="left col-xs-4 col-sm-3">
+                <div menu></div>
+            </div>
+            <div class="right col-xs-8 col-sm-9">
+                <div ng-view></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

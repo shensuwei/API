@@ -1,0 +1,40 @@
+<div>
+    <style>
+        .menu{
+            margin: 30px 0 0 20px;
+
+        }
+        .list{
+            margin-bottom: 10px;
+        }
+        span{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .son li{
+            margin-left: 30px;
+            font-size: 14px;
+            height: 25px;
+            line-height: 25px;
+        }
+        .son{
+            opacity: 1;
+            height: 60px;
+            transition: all 1s ease;
+        }
+        .son.ng-hide{
+            opacity: 0;
+            height: 0;
+        }
+    </style>
+    <ul class="menu">
+        <li class="list" ng-repeat="item in menu" ng-init="currentIndex=$index">
+            <span ng-click="change($index)">{{item.title}}</span>
+            <ul class="son" ng-show="currentIndex==index" >
+                <li ng-repeat="item1 in item.son" class="show">
+                    <a href="#/list/{{currentIndex}}/{{$index}}">{{item1.title}}</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
